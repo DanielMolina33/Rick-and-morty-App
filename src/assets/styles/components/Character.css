@@ -1,0 +1,41 @@
+.character {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.character-image {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.character-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  text-align:center;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .65);
+  color: #fff;
+}
+
+.character-info {
+  font-size: 18px;
+  color: #fff;
+}
+
+.character-info > p {
+  margin: 5px 0;
+}
+

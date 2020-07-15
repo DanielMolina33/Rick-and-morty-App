@@ -1,0 +1,8 @@
+.loading {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.loading-skeleton {
+  background-color: rgba(255, 255, 255, .5) !important;
+}

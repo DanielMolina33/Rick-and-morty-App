@@ -1,0 +1,60 @@
+.containerCharacters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 130px;
+  gap: 10px;
+}
+
+.containerCharacters > a:nth-child(4n),
+.containerCharacters > a:nth-child(4n+1){
+  grid-row: span 1;
+}
+
+.containerCharacters > a:nth-child(4n+2),
+.containerCharacters > a:nth-child(4n+3){
+  grid-row: span 2;
+}
+
+.containerCharacterInfo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 260px;
+  gap: 10px;
+  color: #fff;
+}
+
+.containerCharacterInfo > div:nth-child(2) {
+  align-self: center;
+}
+
+@media only screen and (min-width: 440px){
+  .containerCharacterInfo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .containerCharacters {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .containerCharacters > a:nth-child(4n),
+  .containerCharacters > a:nth-child(4n+1),
+  .containerCharacters > a:nth-child(4n+2),
+  .containerCharacters > a:nth-child(4n+3){
+    grid-row: auto;
+  }
+
+  .containerCharacters > a:nth-child(2n):not(:nth-child(8n)),
+  .containerCharacters > a:nth-child(5),
+  .containerCharacters > a:nth-child(13) {
+    grid-row: span 2;
+  }
+
+  .containerCharacters > a:nth-child(17),
+  .containerCharacters > a:nth-child(18),
+  .containerCharacters > a:nth-child(19),
+  .containerCharacters > a:nth-child(20) {
+    grid-row: span 1 !important;
+  }
+}
